@@ -1,0 +1,175 @@
+{
+  "access_hardware_computer": "[CORE] A computer is an electronic device that processes data and runs programs, typically with a screen, keyboard, and mouse. [INDICATOR] This indicates the work is designed to run on a desktop or laptop system and may require precise cursor control, large displays, or locally executed software.",
+
+  "access_hardware_printer": "[CORE] A printer is a device that produces physical output from digital files, usually on paper. [INDICATOR] This indicates the work includes printable components, such as generated poems, visual layouts, or instructions meant to exist as physical objects.",
+
+  "access_hardware_internet_browser": "[CORE] An internet browser is a software application used to access and display websites and online content. [INDICATOR] This indicates the work is accessed through web pages and relies on web technologies such as hyperlinks, scripts, or online media.",
+
+  "access_hardware_loudspeakers": "[CORE] Loudspeakers are devices that convert electrical signals into audible sound in a shared space. [INDICATOR] This indicates the work includes sound meant to be heard publicly, such as spoken text, sound poetry, or ambient audio in an installation.",
+
+  "access_hardware_headphones": "[CORE] Headphones are wearable audio devices that allow private listening. [INDICATOR] This indicates the work includes audio intended for individual and immersive listening, such as whispered narration or spatial sound.",
+
+  "access_hardware_smartphone": "[CORE] A smartphone is a handheld computing device with a touchscreen and built-in sensors. [INDICATOR] This indicates the work is designed for mobile use and may involve touch gestures, movement, or location-based interaction.",
+
+  "access_hardware_camera": "[CORE] A camera is a device that captures images or video from the physical environment. [INDICATOR] This indicates the work incorporates live visual input from the reader's surroundings as part of the literary experience.",
+
+  "access_hardware_tablet": "[CORE] A tablet is a portable touchscreen computer larger than a smartphone but smaller than a laptop. [INDICATOR] This indicates the work is designed for touch-based interaction and visual reading on a medium-sized portable screen.",
+
+  "access_hardware_cd_player": "[CORE] A compact disc player is a device that reads digital content stored on optical discs. [INDICATOR] This indicates the work is distributed on physical digital media and accessed without needing an internet connection.",
+
+  "access_hardware_motion_capture": "[CORE] Motion capture systems detect and track human body movement using sensors or cameras. [INDICATOR] This indicates the work responds to the reader's physical gestures, making bodily movement part of the interaction.",
+
+  "access_hardware_no_information": "[CORE] No information indicates missing technical documentation. [INDICATOR] This indicates the access hardware used is unknown.",
+
+  "publication_type_application": "[CORE] An application is a self-contained program designed to perform specific functions on a device. [INDICATOR] This indicates the work is experienced through a dedicated executable program rather than through a browser or static file.",
+
+  "publication_type_file": "[CORE] A file is a discrete unit of stored digital data, such as a document, image, or executable. [INDICATOR] This indicates the work exists as a downloadable or transferable object that can be opened directly.",
+
+  "publication_type_website": "[CORE] A website is a collection of interconnected web pages accessible through the internet. [INDICATOR] This indicates the work is structured as an online environment navigated through links and web interfaces.",
+
+  "publication_type_platform": "[CORE] A platform is an online service that hosts and organizes user content and interaction. [INDICATOR] This indicates the work exists within a larger system such as a social network or hosting service rather than independently.",
+
+  "publication_type_cd/dvd": "[CORE] A compact disc or digital versatile disc is a physical storage medium used to distribute digital data. [INDICATOR] This indicates the work was distributed as a physical digital object requiring specific hardware to access.",
+
+  "publication_type_exhibition": "[CORE] An exhibition is a curated public presentation of works in a physical or virtual space. [INDICATOR] This indicates the work is presented as part of a curated display, often with spatial or contextual framing.",
+
+  "publication_type_print": "[CORE] Print refers to content produced on physical materials such as paper. [INDICATOR] This indicates the work includes a physical textual or visual component, even if it originates digitally.",
+
+  "publication_type_installation": "[CORE] An installation is a spatial artwork designed to be experienced in a specific physical environment. [INDICATOR] This indicates the work involves physical arrangement, space, and possibly sensors or projection.",
+
+  "publication_type_software": "[CORE] Software is a set of instructions that enables a computer to perform specific tasks. [INDICATOR] This indicates the work exists as programmable logic executed by a computer system.",
+
+  "publication_type_social_media": "[CORE] Social media are online services where users create and share content with others. [INDICATOR] This indicates the work exists within interactive social systems such as message feeds or public posts.",
+
+  "publication_type_virtual_world": "[CORE] A virtual world is a persistent digital environment that simulates space and interaction. [INDICATOR] This indicates the work takes place in an immersive simulated environment where readers may navigate and interact spatially.",
+
+  "publication_type_no_information": "[CORE] No information indicates missing technical documentation. [INDICATOR] This indicates the publication type is unknown.",
+
+  "genre_poetry": "[CORE] Poetry is a literary form that emphasizes rhythm, sound, and condensed language. [INDICATOR] This indicates the work focuses on expressive language, structure, or visual arrangement rather than linear storytelling.",
+
+  "genre_narrative": "[CORE] Narrative is a literary form that presents events in sequence to tell a story. [INDICATOR] This indicates the work focuses on characters, events, and progression over time.",
+
+  "genre_poetry_and_narrative": "[CORE] Poetry and narrative combines expressive language with storytelling elements. [INDICATOR] This indicates the work includes both structured poetic language and story progression.",
+
+  "genre_other": "[CORE] Other refers to literary forms that do not fit traditional poetry or narrative categories. [INDICATOR] This indicates the work may be experimental, procedural, or conceptual rather than conventional literary forms.",
+
+  "genre_no_information": "[CORE] No information indicates missing documentation. [INDICATOR] This indicates the genre is unknown.",
+
+  "technical_requirements_internet_connection": "[CORE] An internet connection enables communication between a device and remote servers. [INDICATOR] This indicates the work depends on remote data, online interaction, or web-based delivery.",
+
+  "technical_requirements_install_software/add_on": "[CORE] Installing software or add-ons involves adding programs to a system to enable functionality. [INDICATOR] This indicates the work requires specific software components beyond default system capabilities.",
+
+  "technical_requirements_internet_browser": "[CORE] An internet browser is a program used to access and display web content. [INDICATOR] This indicates the work runs within a browser environment rather than as standalone software.",
+
+  "technical_requirements_ram": "[CORE] Random access memory is temporary electronic storage used while a computer is running programs. [INDICATOR] This indicates the work requires sufficient memory resources to operate correctly.",
+
+  "technical_requirements_execute_locally": "[CORE] Executing locally means running directly on a user's device without internet communication. [INDICATOR] This indicates the work exists as locally stored software or files.",
+
+  "technical_requirements_submit_to_emulation": "[CORE] Emulation involves recreating older hardware or software environments on modern systems. [INDICATOR] This indicates the work depends on obsolete systems and must be simulated to function.",
+
+  "technical_requirements_access_to_platform_/_service": "[CORE] Access to a platform or service means using a specific hosted system to reach content. [INDICATOR] This indicates the work is dependent on external infrastructure controlled by a provider.",
+
+  "technical_requirements_no_information": "[CORE] No information indicates missing technical documentation. [INDICATOR] This indicates the technical requirements are unknown.",
+ 
+  "format_image": "[CORE] An image is a visual representation composed of pixels or graphical elements. [INDICATOR] This indicates the work presents meaning primarily through visual composition.",
+
+  "format_video_game": "[CORE] A video game is an interactive digital system involving player input and visual feedback. [INDICATOR] This indicates the work includes gameplay mechanics such as movement, exploration, or rule-based interaction.",
+
+  "format_text": "[CORE] Text is written language composed of words and symbols. [INDICATOR] This indicates the work communicates meaning primarily through written language.",
+
+  "format_virtual_environment": "[CORE] A virtual environment is a digitally simulated space that can be explored. [INDICATOR] This indicates the work involves spatial navigation within a simulated world.",
+
+  "format_video": "[CORE] Video is a sequence of moving images displayed over time. [INDICATOR] This indicates the work includes temporal visual sequences such as recorded or generated motion.",
+
+  "format_audio": "[CORE] Audio is sound recorded or generated electronically. [INDICATOR] This indicates the work communicates meaning through spoken language, music, or sound.",
+
+  "format_database": "[CORE] A database is an organized collection of structured data. [INDICATOR] This indicates the work draws from structured information sets or allows querying of stored elements.",
+
+  "format_search_engine": "[CORE] A search engine is a system that retrieves information based on queries. [INDICATOR] This indicates the work involves querying, filtering, or retrieving textual or media content.",
+
+  "format_physical_artefact": "[CORE] A physical artifact is a tangible object existing in material form. [INDICATOR] This indicates the work includes physical components alongside digital processes.",
+
+  "format_access_to_platform/service": "[CORE] Access to a platform or service means interacting through hosted online infrastructure. [INDICATOR] This indicates the work depends on external systems rather than existing independently.",
+
+  "format_no_information": "[CORE]  No information indicates missing technical documentation. [INDICATOR] This indicates the format is unknown.",
+  
+  "reading_process_navigation": "[CORE] Navigation involves moving between different elements or locations. [INDICATOR] This indicates the reader progresses by choosing paths or links.",
+
+  "reading_process_manipulation": "[CORE] Manipulation involves physically altering digital elements through input. [INDICATOR] This indicates the reader directly changes visual or textual elements.",
+
+  "reading_process_observation": "[CORE] Observation involves viewing content without altering it. [INDICATOR] This indicates the reader primarily watches or listens rather than intervening.",
+
+  "reading_process_alter_elements": "[CORE] Altering elements involves modifying existing components. [INDICATOR] This indicates the reader actively changes the state of the work.",
+
+  "reading_process_content_generation": "[CORE] Content generation involves producing new material. [INDICATOR] This indicates the reader triggers creation of new text or media.",
+
+  "reading_process_activate_/_deactivate": "[CORE] Activating or deactivating involves turning functions on or off. [INDICATOR] This indicates the reader controls system features.",
+
+  "reading_process_detect_input_devices": "[CORE] Detecting input devices involves recognizing connected hardware. [INDICATOR] This indicates the work responds differently based on hardware.",
+
+  "reading_process_selection_of_elements": "[CORE] Selection involves choosing among available options. [INDICATOR] This indicates the reader determines progression through choices.",
+
+  "reading_process_log_in": "[CORE] Logging in involves authenticating identity in a system. [INDICATOR] This indicates the work includes user-specific content or interaction.",
+
+  "reading_process_upload_files": "[CORE] Uploading files involves sending local data to a system. [INDICATOR] This indicates the reader contributes external content.",
+
+  "reading_process_download_content": "[CORE] Downloading involves transferring data from a remote system. [INDICATOR] This indicates the work provides downloadable components.",
+
+  "reading_process_input_information": "[CORE] Inputting information involves entering data manually. [INDICATOR] This indicates the reader contributes textual or numerical input.",
+
+  "reading_process_no_information": "[CORE] No information indicates missing technical documentation. [INDICATOR] This indicates the publication type is unknown.",
+
+  "program_adobe_acrobat": "[CORE] Adobe Acrobat is software used to read and display portable document files. [INDICATOR] This indicates the work exists as structured document files requiring a document reader.",
+
+  "program_bitsy": "[CORE] Bitsy is a tool for creating small interactive games and narratives. [INDICATOR] This indicates the work uses simple visual game mechanics for storytelling.",
+
+  "program_bot": "[CORE] A bot is an automated software agent that performs tasks. [INDICATOR] This indicates the work operates through automated responses or generation.",
+
+  "program_qr_code": "[CORE] A quick response code is a visual pattern readable by devices. [INDICATOR] This indicates the work links physical and digital access through scanning.",
+
+  "program_exe": "[CORE] An executable file is a program that runs directly on a computer. [INDICATOR] This indicates the work is distributed as runnable software.",
+
+  "program_flash": "[CORE] Flash was software used to create interactive multimedia content. [INDICATOR] This indicates the work uses timeline-based animation and interaction.",
+
+  "program_gif": "[CORE] A graphics interchange format file supports animated images. [INDICATOR] This indicates the work uses looping visual sequences.",
+
+  "program_html/php": "[CORE] Hypertext markup language and personal home page are technologies for building web pages. [INDICATOR] This indicates the work is built using web programming.",
+
+  "program_artificial_intelligence": "[CORE] Artificial intelligence refers to computational systems that simulate intelligent processes. [INDICATOR] This indicates the work generates or analyzes content automatically.",
+
+  "program_java": "[CORE] Java is a programming language used to create software applications. [INDICATOR] This indicates the work is implemented through structured programming.",
+
+  "program_macromedia": "[CORE] Macromedia developed multimedia authoring tools. [INDICATOR] This indicates the work was created using multimedia authoring software.",
+
+  "program_microsoft_office": "[CORE] Microsoft Office is software for creating documents and presentations. [INDICATOR] This indicates the work uses structured document formats.",
+
+  "program_midipoet": "[CORE] Midipoet is software for generating poetry using structured rules. [INDICATOR] This indicates the work involves automated poetic generation.",
+
+  "program_does_not_apply": "[CORE] Does not apply indicates no specific program was used. [INDICATOR] This indicates the work does not depend on identifiable software.",
+
+  "program_eko_platform": "[CORE] Eko platform is a system for interactive storytelling. [INDICATOR] This indicates the work includes branching narrative interaction.",
+
+  "program_no_information": "[CORE] No information indicates missing technical documentation. [INDICATOR] This indicates the program used is unknown.",
+
+  "program_video": "[CORE] Video refers to moving image recording technology. [INDICATOR] This indicates the work involves recorded visual sequences.",
+
+  "program_virtual_reality_modelling_language": "[CORE] Virtual reality modelling language defines three-dimensional environments. [INDICATOR] This indicates the work includes navigable spatial environments.",
+
+  "program_ascii": "[CORE] ASCII is a system for representing text characters numerically. [INDICATOR] This indicates the work uses text as symbolic computational material.",
+
+  "program_minitel": "[CORE] Minitel was a networked information system. [INDICATOR] This indicates the work exists in early networked text environments.",
+
+  "program_fortran": "[CORE] Fortran is a programming language designed for computation. [INDICATOR] This indicates the work involves structured computational logic.",
+
+  "program_unity": "[CORE] Unity is software for creating interactive environments. [INDICATOR] This indicates the work includes spatial interaction and simulation.",
+
+  "program_jgnoetry": "[CORE] jGnoetry is software for automated poetry generation. [INDICATOR] This indicates the work produces text algorithmically.",
+
+  "program_asymetrix_toolbox": "[CORE] Asymetrix Toolbox was multimedia authoring software. [INDICATOR] This indicates the work was assembled using multimedia authoring tools.",
+
+  "program_jasc_animation_shop": "[CORE] Jasc Animation Shop was software for creating animated images. [INDICATOR] This indicates the work includes frame-based animation.",
+
+  "program_managana": "[CORE] Managana is software for creating interactive narratives. [INDICATOR] This indicates the work combines media and interaction.",
+
+  "program_paint_shop_pro": "[CORE] Paint Shop Pro is software for creating and editing images. [INDICATOR] This indicates the work includes digitally created visual imagery."
+}

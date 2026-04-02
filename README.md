@@ -1,0 +1,24 @@
+# From One-Hot to Semantic Space: Embedding Heterogeneous Metadata for Small Digital Humanities Datasets
+
+This repository accompanies the paper "From One-Hot to Semantic Space: Embedding Heterogeneous Metadata for Small Digital Humanities Datasets". It implements a pipeline to compare symbolic (one-hot) and semantic (LLM-based) representations of categorical metadata for a digital literature dataset coming from two distinct databases.
+The pipeline of this paper is inspired by the [ARISE framework](https://github.com/develop-yang/ARISE/tree/main).
+
+## Repository structure
+
+```
+.
+├── semantic_encoding_DH.py      # Main script
+├── DL_dataset.csv              # Dataset (wide binary metadata)
+├── DL_descriptions.JSON        # Semantic descriptions
+├── outputs/                    # Generated results
+├── prompt.md                   # LLM prompt template
+└── README.md
+```
+
+## Usage
+```bash
+python dh_semantic_pipeline.py \
+  --csv DL_dataset.csv \
+  --descriptions DL_descriptions.JSON \
+  --outdir outputs
+```

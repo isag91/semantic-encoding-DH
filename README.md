@@ -10,14 +10,13 @@ The pipeline of this paper is inspired by the [ARISE framework](https://github.c
 ├── semantic_encoding_DH.py      # Main script
 ├── DL_dataset.csv              # Dataset (wide binary metadata)
 ├── DL_descriptions.JSON        # Semantic descriptions
-├── outputs/                    # Generated results
 ├── prompt.md                   # LLM prompt template
 └── README.md
 ```
 
 ## Usage
 ```bash
-python dh_semantic_pipeline.py \
+python semantic_encoding_DH.py \
   --csv DL_dataset.csv \
   --descriptions DL_descriptions.JSON \
   --outdir outputs

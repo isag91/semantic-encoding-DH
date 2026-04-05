@@ -112,35 +112,6 @@ FEATURE: reading_process (these refer to the ways in which art artowrk is intera
 - Value 10: download content
 - Value 11: input information
 
-FEATURE: program
-- Value 0: Adobe Acrobat
-- Value 1: Bitsy
-- Value 2: bot
-- Value 3: QR code
-- Value 4: EXE
-- Value 5: Flash
-- Value 6: GIF
-- Value 7:  HTML/PHP
-- Value 8: Artificial Intelligence
-- Value 9: Java
-- Value 10: Macromedia
-- Value 11: Microsoft Office
-- Value 12: Midipoet
-- Value 13: Does not apply
-- Value 14: eko platform
-- Value 15: No information
-- Value 16: Video
-- Value 17: Virtual Reality Modelling Language
-- Value 18: ASCII
-- Value 19: Minitel
-- Value 20: Fortran
-- Value 21: Unity
-- Value 22: jGnoetry
-- Value 23: Asymetrix Toolbox
-- Value 24: Jasc Animation Shop
-- Value 25: Managana
-- Value 26: Paint Shop Pro
-
 
 
 OUTPUT FORMAT: Return a JSON object where each key is "feature_value" (e.g., "access_hardware_0", "access_hardware_1") and the value is the complete description string.

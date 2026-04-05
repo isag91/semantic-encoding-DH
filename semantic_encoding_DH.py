@@ -15,18 +15,14 @@ This script is tailored to the attached dataset format:
 
 Example
 -------
-python dh_semantic_pipeline_adjusted.py \
-    --csv /path/to/data_DL_.csv \
-    --descriptions /path/to/descriptions_DL.JSON \
+python semantic_encoding_DH.py \
+    --csv /path/to/DL_dataset.csv \
+    --descriptions /path/to/DL_descriptions.JSON \
     --outdir /path/to/outputs \
-    --drop-features Technique
 
-Optional:
-- add --no-technique as a shortcut to drop the Technique feature
-- change --model if you want another Hugging Face encoder
 """
-
 from __future__ import annotations
+
 
 import argparse
 import json
@@ -43,14 +39,15 @@ from transformers import AutoModel, AutoTokenizer
 
 
 # ---------------------------------------------------------------------
-# Configuration tailored to the attached files
+# Configuration tailored to the dataset and description files
 # ---------------------------------------------------------------------
 
-NON_METADATA_COLUMNS = {
+NON_FEATURE_COLUMNS = {
     "Title", "Author(s)", "Country", "Year", "DB", "URL", "Women", "Men", "Both"
 }
 
 
+#avoid computing measures for the categories "other" and "no_information"
 GENRE_LABELS_DEFAULT = [
     "poetry",
     "narrative",
@@ -84,7 +81,7 @@ def normalize_spaces(text: str) -> str:
 def metadata_columns(df: pd.DataFrame) -> List[str]:
     cols = []
     for c in df.columns:
-        if c in NON_METADATA_COLUMNS:
+        if c in NON_FEATURE_COLUMNS:
             continue
         if " : " in c:
             cols.append(c)
@@ -132,7 +129,7 @@ def cosine_distance(a: np.ndarray, b: np.ndarray, eps: float = 1e-12) -> float:
 
 class AttentionWeightedTextEncoder:
     """
-    Implements the parameter-free token weighting described in the spirit of ARISE:
+    Implements the parameter-free token weighting described in ARISE:
     1) obtain token embeddings from the last hidden state
     2) compute token scores as mean activation across hidden dimensions
     3) softmax over scores
@@ -140,11 +137,9 @@ class AttentionWeightedTextEncoder:
     """
 
     def __init__(self, model_name: str = "sentence-transformers/all-mpnet-base-v2", device: str | None = None):
-        self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model = AutoModel.from_pretrained(model_name)
         self.model.eval()
-        self.model.to(self.device)
 
     @torch.inference_mode()
     def encode_text(self, text: str, max_length: int = 256) -> np.ndarray:
@@ -155,14 +150,12 @@ class AttentionWeightedTextEncoder:
             padding=True,
             max_length=max_length,
         )
-        batch = {k: v.to(self.device) for k, v in batch.items()}
         outputs = self.model(**batch)
         hidden = outputs.last_hidden_state[0]               # [seq_len, hidden_dim]
         attention_mask = batch["attention_mask"][0].bool()  # [seq_len]
 
         hidden = hidden[attention_mask]
         if hidden.shape[0] == 0:
-            # extremely defensive fallback
             hidden = outputs.last_hidden_state[0]
 
         scores = hidden.mean(dim=1)            # [seq_len]
@@ -184,7 +177,7 @@ def precompute_value_embeddings(
 ) -> Dict[str, np.ndarray]:
     """
     Precompute one semantic embedding per metadata value column.
-    Also precompute feature-level no_information embeddings where available.
+    Also precompute feature-level no_information embeddings.
     """
     embeddings: Dict[str, np.ndarray] = {}
     keys_to_encode: Dict[str, str] = {}
@@ -202,7 +195,7 @@ def precompute_value_embeddings(
 
         no_info_key = NO_INFORMATION_KEYS.get(feature)
         if no_info_key and no_info_key in descriptions:
-            keys_to_encode[f"__NO_INFORMATION__::{feature}"] = no_info_key
+            keys_to_encode[f"{feature} : __NO_INFORMATION__"] = no_info_key
 
     total = len(keys_to_encode)
     for idx, (name, desc_key) in enumerate(keys_to_encode.items(), start=1):
@@ -276,7 +269,7 @@ def build_semantic_encoding(
                 vecs = np.stack([value_embeddings[c] for c in active_cols], axis=0)
                 block = vecs.mean(axis=0)
             else:
-                no_info_name = f"__NO_INFORMATION__::{feature}"
+                no_info_name = f"{feature} : __NO_INFORMATION__"
                 if add_no_information and no_info_name in value_embeddings:
                     block = value_embeddings[no_info_name]
                 else:
@@ -370,8 +363,8 @@ def compute_database_normalized_centrality(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--csv", required=True, help="Path to data_DL_.csv")
-    parser.add_argument("--descriptions", required=True, help="Path to descriptions_DL.JSON")
+    parser.add_argument("--csv", required=True, help="Path to DL_dataset.csv")
+    parser.add_argument("--descriptions", required=True, help="Path to DL_descriptions.JSON")
     parser.add_argument("--outdir", required=True, help="Output directory")
     parser.add_argument(
         "--model",
